@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Services">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layer"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contact"
+                android:visibility="gone"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="name"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="District"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/districtholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Body weight (bmi)"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bmiholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/glucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sugar concentration"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/glucoseholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Age"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ageholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Occupation"
+                android:inputType="textPersonName"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="66dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/occupationholda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+            <Button
+                android:id="@+id/enterperiod"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/white"
+                android:text="Enter Saving Period"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/enter"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:visibility="gone"
+                android:textColorHint="@color/black"
+                android:hint="Enter Period"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                />
+
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="261dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:background="#03423C"
+                android:clickable="true"
+                android:text="REGISTER"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+
+</RelativeLayout>

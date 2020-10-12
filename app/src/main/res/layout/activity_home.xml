@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="1dp">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="My home"
+            android:textColor="@color/sea"
+            android:gravity="center"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="City"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/cityholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="City Name"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Town"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/townholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/village"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Village"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/villageholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Village Name"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_above="@+id/navigation"
+        android:layout_marginBottom="35dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/healthcenter"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:onClick="ShowPopup"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:src="@drawable/logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Nurses available"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="view nurses"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nutrition"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+
+                            android:padding="10dp"
+                            android:src="@drawable/view" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Nutrition monitor"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Monitor your nutrition"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/tips"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="140dp"
+                            android:layout_height="90dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:src="@drawable/safe" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Doctors available"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Find doctors"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bmi"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+
+                            android:padding="10dp"
+                            android:src="@drawable/bmi2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Weight calculator"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="View your weight"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/pharmacy"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:src="@drawable/pharm" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Available pharmacies"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:gravity="center"
+                            android:text="Need drugs? "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/followup"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:src="@drawable/follow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Follow-up"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Patient follow-up"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/excercise"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@color/white"
+                            android:src="@drawable/pharm" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Excercise monitor"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Excercise tips"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/physiothelapy"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@color/white"
+                            android:src="@drawable/yog" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Physiothelapists"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="View excercise expert"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/white"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>

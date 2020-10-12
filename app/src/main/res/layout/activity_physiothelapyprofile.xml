@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    android:paddingLeft="5dp"
+    android:paddingTop="1dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="1dp"
+    tools:context=".dietitianprofile">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg5"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        tools:context=".profile">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textColor="#0B0B0B"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView2"
+            android:layout_width="114dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <EditText
+            android:id="@+id/fullnames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Full names"
+            android:inputType="textPersonName"
+            android:textColor="#070000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView2" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Location"
+            android:inputType="textPersonName"
+            android:textColor="#070000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="contact"
+            android:inputType="phone"
+            android:textColor="#090000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullnames" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="271dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="#499DDF"
+            android:text="SUBMIT"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:backgroundTint="@color/grey"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>
